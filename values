@@ -1,0 +1,55 @@
+@import "./F&V";
+@include fonts;
+@include global;
+html {
+  scroll-behavior: auto;
+}
+body {
+  position: relative;
+}
+.socialsCont {
+  @include display(grid, 1, 3, center, center, 20vh, 8vw);
+  border: solid;
+  position: absolute;
+}
+.linkedinImg {
+  height: auto;
+  width: 3vw;
+  position: absolute;
+}
+.githubImg {
+  height: auto;
+  width: 3vw;
+  position: absolute;
+}
+
+mixins 
+
+// fonts import
+@mixin fonts {
+  @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&family=Xanh+Mono&display=swap");
+}
+
+//global rules
+@mixin global {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+}
+// function for creating grid layouts quickly
+@mixin display($g, $gtc, $gtr, $jc, $ai, $h, $w) {
+  display: $g;
+  grid-template-columns: repeat($gtc, auto);
+  grid-template-rows: repeat($gtr, auto);
+  justify-content: $jc;
+  align-items: $ai;
+  height: $height;
+  width: $width;
+}
+
+// variables for the website styling
+$primary-color: white;
+$secondary-color: rgb(233, 233, 233);
+$accent-color: rgb(51, 105, 255);

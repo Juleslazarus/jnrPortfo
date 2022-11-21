@@ -1,0 +1,30 @@
+@mixin fonts {
+  @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&family=Xanh+Mono&display=swap");
+}
+@mixin global {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@mixin display($d, $gtc, $gtr, $jc, $ai, $h, $w) {
+  display: $d;
+  grid-template-columns: repeat($gtc, auto);
+  grid-template-rows: repeat($gtr, auto);
+  justify-content: $jc;
+  align-items: $ai;
+  height: $h;
+  width: $w;
+}
+
+$primary-color: white;
+$secondary-color: rgb(240, 240, 240);
+$accent-color: rgb(58, 121, 255);
+$secondary-accent: rgb(58, 121, 255);
+//animations
