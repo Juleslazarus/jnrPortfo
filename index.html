@@ -4,26 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JNR</title>
+    <title>JNR Web-Developer</title>
     <link rel="stylesheet" href="tailwind.css">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
-<body class="bg-blue-600">
-    <header class="h-[3em] w-full bg-white">
-        <div class="grid grid-cols-3 text-center h-[100%] w-full justify-center content-center ">
-            <a href="#projects" class="no-underline text-md text-blue-600">{Projects}</a>
-            <a href="#tech" class="no-underline text-md text-blue-600">{Technologies}</a>
-            <a href="#contact" class="no-underline text-md text-blue-600">{Contact}</a>
-        </div>
-    </header>
-    <div id="heroCont" class="h-[32em] w-[100%] flex justify-center mt-[5em]">
-        <div class="h-[100%] w-[70%] bg-white rounded-md shadow-lg break-words grid grid-cols-1 justify-center content-center gap-2">
-            <h1 id="heroText" class="text-black text-4xl font-bold text-center">Hi, I'm Julian, A Front-End Developer. </h1>
-            <h1 id="hero-sub-text" class="text-xl text-stone-600 text-center p-4">My Job Is To Make Beautiful & Responsive Web Apps</h1>
-            <div class="grid grid-cols-1 justify-center content-center">
-                <a href="#projects" class="no-underline text-center">View Work</a>
+<body class="bg-gray-900 relative">  
+    <div id="mobileMenu" class="overflow-hidden hidden h-[2em] w-[4em] p-[.4em] rounded-md fixed bg-black text-center">
+        <p id="menuBtn" class="text-white font-bold ">Menu</p>
+        <a id="navBtn-mobile" class="no-underline text-white text-2xl block " href="#top">{Top}</a>
+        <a id="navBtn-mobile" class="no-underline text-white text-2xl block" href="#experience">{Experience}</a>
+        <a id="navBtn-mobile" class="no-udnerline text-white text-2xl block" href="#about">{About Me}</a>
+        <a id="navBtn-mobile" class="no-underline text-white text-2xl block" href="#tech">{Technologies}</a>
+        <a id="navBtn-mobile" class="no-underline text-white text-2xl block" href="#contact">{Contact Me}</a>
+    </div>
+     <section id="top">    <!--this helps me have buttons that send you to each part-->
+        <header id="headerCont" class="w-[100%] h-[5vh] bg-blue-900 flex justify-center content-center ">
+            <div id="header-left" class="text-white font-bold text-3xl p-2">JNR</div>
+            <div id="header-right" class="ml-auto p-2 flex justify-between gap-5">
+                <a id="navBtn" class="no-underline text-white text-lg" href="#top">{Top}</a>
+                <a id="navBtn" class="no-underline text-white text-lg" href="#experience">{Experience}</a>
+                <a id="navBtn" class="no-udnerline text-white text-lg" href="#about">{About Me}</a>
+                <a id="navBtn" class="no-underline text-white text-lg" href="#tech">{Technologies}</a>
+                <a id="navBtn" class="no-underline text-white text-lg" href="#contact">{Contact Me}</a>
+            </div>
+        </header>
+    </section>
+    <div> 
+    </div>
+    <!-- <div id="heroImg" class="absolute h-[40em] w-[35em] ">
+
+    </div> -->
+    <div id="heroCont" class="grid grid-cols-2 gap-5 justify-start content-center text-left h-[40vh] w-[100%] mt-[15em] border-b-[10px] border-blue-900"> 
+        <div> 
+            <h1 id="heroText" class=" text-white font-bold text-4xl text-left pl-5  ">Hey, I'm Julian Naranjo Ramos. </br> I'm A Front End Developer Who </br> 
+                Prioritizes <em class="highlightText">Multi-PlatForm Response.</em> <p class="pt-5 text-xl text-gray-300"> My Job Is To Build <em class="underlinedText"> Beautiful</em> & <em class='underlinedText'>Accessible</em> Websites</p></h1>
+            <div id="heroSocialsCont" class=" flex gap-5  ">
+                <a id="heroLinkedBtn" href="https://www.linkedin.com/in/julian-naranjo-ramos-026747247/" target="_blank"><img id="socialsImg" src="./images/linkedinlogo.png" ></a>
+                <div class="h-[2em] w-[.2em] bg-blue-900"></div>
+                <a id="heroGitBtn" class="" href="https://github.com/Juleslazarus" target="_blank"><img class="" id="socialsImg" src="./images/githublogo.png" ></a>
             </div>
         </div>
+        <img id="heroCodeImg" src="./images/siteimgs/code.png" class="h-[35em] width-[35em]"> 
     </div>
+
+    <section class="h-[10em] w-[100%]  mt-[25em] mb-[5em] grid content-center justify-center">
+        <h1 id="experience" class="text-white text-4xl font-bold text-center">Experience</h1>
+    </section>
+    <section id="ExperienceCont" class="w-[100%] grid justify-center gap-[5em]">
+        <div>
+            <a class="" href="https://juleslazarus.github.io/C.N.B/" target="_blank"> 
+                <img class="rounded-2xl h-[auto] w-[50vw] brightness-[70%] transition-all delay-400 hover:brightness-[100%]" src="./images/cnb.png">
+            </a>
+            <div id="techStack" class="rounded-lg flex opacity-0 justify-center mt-10">
+                <img src="./images/tech/html5.png"> 
+                <img src="./images/tech//css3.png">
+            </div>
+        </div>
+        <div>
+            <a class="" href="http://www.speedwaydetailing.autos/" target="_blank"> 
+                <img class="rounded-2xl h-[auto] w-[50vw] brightness-[70%] transition-all delay-400 hover:brightness-[100%]" src="./images/speedway.png">
+            </a>
+            <div id="techStack" class="rounded-lg flex opacity-0 justify-center mt-10">
+                <img src="./images/tech/html5.png"> 
+                <img src="./images/tech//css3.png">
+            </div>
+        </div>
+        <div>
+            <a class="" href="https://juleslazarus.github.io/insta-sign-up/" target="_blank">
+                <img class="rounded-2xl h-[auto] w-[50vw] brightness-[70%] transition-all delay-400 hover:brightness-[100%]" src="./images/instagramClone.png">
+            </a>
+            <div id="techStack" class="rounded-lg flex opacity-0 justify-center mt-10">
+                <img src="./images/tech/html5.png"> 
+                <img src="./images/tech//css3.png">
+            </div>
+        </div>
+        <div>
+            <h1 class="text-2xl text-white text-center ">In Progress</h1>
+            <img id="weatherProj" class="rounded-2xl h-[auto] w-[50vw] brightness-[70%] transition-all delay-400 hover:brightness-[100%]" src="./images/mysimpleweather.png">
+            <div id="techStack" class="rounded-lg flex opacity-0 justify-center mt-10">
+                <img src="./images/tech/react.png"> 
+                <img src="./images/tech//tailwinds.png">
+            </div>
+        </div>
+    </section>
+    <h1 class="text-4xl text-white font-bold text-center mt-[4em] ">About Me</h1>
+    <section id="about" class="flex justify-center">
+        <div id="aboutCont" class="w-[50%]"> 
+            <h1 id="aboutText" class="text-2xl text-left text-white mt-[5em] p-5 border-[.4em] break-words border-blue-900 rounded-lg mb-[2em]">I'm From Sunny California
+                 And I <em class="highlightText "> Love</em> Working With Technology Both On The Hardware And The Software. I Find That I Enjoy Building Projects From The Ground Up And Maintaining / Creating 
+                  Additional Features And Seeing The Evolution Of An Idea Come To Life. I Believe My Experience In Various Fields Proves I'm Adaptable To Any Position And More Than Willing To 
+                  Learn New Things. </br> </br> I Hope We Can Work Together In The Future. <em class="highlightText"> Thank You </em> For Sharing <em class='underlinedText'> Your </em> Time And Taking A Look Around. 
+                 </h1>
+        </div>
+    </section>
+    <h1 class="text-white text-4xl text-center mt-[4em] mb-[4em] ">Technologies That I Use</h1>
+    <Section id="tech" class="w-[100%] h-[40em]  ">
+        <div id="techCont" class="h-[40em] w-[40] ">
+            <img class="h-[auto] w-[20em]" src="./images/tech/html5.png">
+            <img class="h-[auto] w-[20em]" src="./images/tech/css3.png">
+            <img id="jsImg" class="h-[auto] w-[20em]" src="./images/tech/javascript.png">
+            <img class="h-[auto] w-[20em]" src="./images/githublogo.png">
+            <img class="h-[auto] w-[20em]" src="./images/tech/react.png">
+            <img class="h-[auto] w-[20em]" src="./images/tech/tailwinds.png">
+        </div>
+    </Section>
+    <h1 class="text-4xl text-white mt-[4em] text-center">Contact Me</h1>
+    <section id="contact" class="contactCont  ">
+        <form class="contactForm bg-blue-900 p-10 rounded-lg" action="https://formsubmit.co/juliannaranjoramos@gmail.com" method="post"> 
+            <label >First Name:</label>
+            <input class="rounded-md" type="text" required placeholder="John">
+            <label >Last Name:</label>
+            <input type="text" required placeholder="Doe">
+            <label >LinkedIn URL (optional): </label>
+            <input type="text"  placeholder="https://URL.com">
+            <label >Email:</label>
+            <input type="email" required placeholder="yourname@domain.com">
+            <label >Leave A Message:</label>
+            <textarea class="resize-none" placeholder="We'd Like To Hire You!"></textarea>
+            <button class="rounded-lg" type="submit">Send Message</button>
+    </section>
+
+    <div class="bg-gray-800"> 
+        <p class="text-white text-center mt-20">© JNR |  
+            <a class="text-white text-center" href="https://www.linkedin.com/in/julian-naranjo-ramos-026747247/" target="_blank">LinkedIn</a> |
+            <a class="text-white text-center" href="https://github.com/Juleslazarus" target="_blank">GitHub</a>
+        </p>
+        
+    </div>
+    <script defer src="script.js"></script>
 </body>
 </html>
