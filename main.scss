@@ -89,7 +89,27 @@ html{
 
     }
 
-
+@media all and (max-width: 4000px) {
+    #mobileMenu {
+        display: block; 
+        top: 5%; 
+        right: 5%;
+        transition: all .1s; 
+        z-index: 10;
+        #navBtn-mobile {
+            transition-delay: .2s;
+        }
+        // &:hover {
+            //     height: 40vh; 
+        //     width: 100vw; 
+        //     right: 0%;
+        //     opacity: 80%; 
+        //     #navBtn-mobile {
+        //         display: block;
+        //     }
+        // }
+        } 
+}
 @media all and (max-width: 750px) {
     #navBtn {
         display: none; 
