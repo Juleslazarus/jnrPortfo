@@ -10,6 +10,18 @@
   border-bottom: #1e3fad 0.2em solid;
 }
 
+#mobileMenu p {
+  text-shadow: none !important;
+}
+
+#mobileMenu a {
+  text-shadow: none !important;
+}
+
+#mobileMenu button {
+  text-shadow: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -192,12 +204,79 @@ html {
   width: 5em;
 }
 
-#ExperienceCont div a img {
-  box-shadow: 40px 20px 1px 1px rgba(30, 59, 138, 0.404);
+#expCont {
+  overflow: hidden;
+  position: relative;
 }
 
-#ExperienceCont div a img:hover {
-  box-shadow: 60px 30px 1px 1px #2555d6;
+.projContSwd {
+  display: none;
+}
+
+.projContInsta {
+  display: none;
+}
+
+.leftArrow,
+.rightArrow {
+  font-size: 5em;
+  position: absolute;
+  top: 17%;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+@media all and (min-width: 1000px) {
+  .leftArrow,
+  .rightArrow {
+    top: 33% !important;
+  }
+}
+
+.leftArrow {
+  left: 1%;
+}
+
+.rightArrow {
+  right: 1%;
+}
+
+.techStack {
+  display: flex;
+  justify-content: center;
+  margin-top: .5em;
+}
+
+.techStack img {
+  height: auto;
+  width: 5em;
+}
+
+.expNavBar {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+  position: relative;
+}
+
+.expNavBar .expNavLeft,
+.expNavBar .expNavMiddle,
+.expNavBar .expNavRight {
+  height: .5em;
+  width: 3em;
+  background: white;
+  border-radius: 15%;
+}
+
+.expNavBar .expNavLeft:hover,
+.expNavBar .expNavMiddle:hover,
+.expNavBar .expNavRight:hover {
+  cursor: pointer;
+}
+
+.expNavBar .expNavLeft {
+  background: blue;
 }
 
 #weatherProj {
