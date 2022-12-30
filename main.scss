@@ -257,6 +257,9 @@ html{
 .projContInsta {
     display: none; 
 }
+.projCont2Due {
+    display: none; 
+}
 .leftArrow, 
 .rightArrow {
     font-size: 5em; 
@@ -293,9 +296,10 @@ html{
     gap: 1em; 
     margin-top: 1em; 
     position: relative; 
-    .expNavLeft, 
-    .expNavMiddle, 
-    .expNavRight {
+    .expNavOne {
+        background: blue ; 
+    }
+    div {
         height: .5em; 
         width: 3em; 
         background: white; 
@@ -310,9 +314,9 @@ html{
 }
 #weatherProj {
     box-shadow: 40px 20px 1px 1px rgba(30, 59, 138, 0.404); 
-             &:hover {
-                 box-shadow: 60px 30px 1px 1px rgb(37, 85, 214); 
-             }
+            &:hover {
+                box-shadow: 60px 30px 1px 1px rgb(37, 85, 214); 
+            }
 }
 
 #aboutText {
@@ -327,10 +331,16 @@ html{
     grid-template-columns: repeat(3, auto);
     justify-content: center; 
     align-items: center; 
+    #jsImg {
+        height: auto; 
+        width: 24vw; 
+    }
     img {
+        height: auto; 
+        width: 25vw; 
         transition: all .4s; 
         &:hover {
-            transform: translateY(-10px)
+            transform: translateY(-10px); 
         }
     }
     

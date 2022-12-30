@@ -217,6 +217,10 @@ html {
   display: none;
 }
 
+.projCont2Due {
+  display: none;
+}
+
 .leftArrow,
 .rightArrow {
   font-size: 5em;
@@ -260,18 +264,18 @@ html {
   position: relative;
 }
 
-.expNavBar .expNavLeft,
-.expNavBar .expNavMiddle,
-.expNavBar .expNavRight {
+.expNavBar .expNavOne {
+  background: blue;
+}
+
+.expNavBar div {
   height: .5em;
   width: 3em;
   background: white;
   border-radius: 15%;
 }
 
-.expNavBar .expNavLeft:hover,
-.expNavBar .expNavMiddle:hover,
-.expNavBar .expNavRight:hover {
+.expNavBar div:hover {
   cursor: pointer;
 }
 
@@ -298,7 +302,14 @@ html {
   align-items: center;
 }
 
+#techCont #jsImg {
+  height: auto;
+  width: 24vw;
+}
+
 #techCont img {
+  height: auto;
+  width: 25vw;
   transition: all .4s;
 }
 
