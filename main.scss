@@ -20,6 +20,19 @@ $sT: rgb(30, 63, 173); //special-Text used to accent certain parts of the page
 }
 
 //!
+::-webkit-scrollbar {
+    width: 5px; 
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-button {
+    background: black; 
+    height: 5%;
+}
+::-webkit-scrollbar-thumb {
+    background: $sT;
+}
 
 
 #mobileMenu {
@@ -246,50 +259,64 @@ html{
         width: 5em; 
     }
 }
+@media all and (max-width: 650px) {
+    .expCont {
+        div{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            img {
+                height: auto !important; 
+                width: 100vw !important; 
 
-#expCont {
+            }
+            .techStack {
+                display: flex; 
+                flex-direction: row;
+                height: auto; 
+                width: 50rem !important; 
+            }
+        }
+    }
+}
+.expCont {
     overflow: hidden; 
     position: relative; 
-}
-.projContSwd {
-    display: none; 
-}
-.projContInsta {
-    display: none; 
-}
-.projCont2Due {
-    display: none; 
-}
-.leftArrow, 
-.rightArrow {
-    font-size: 5em; 
-    position: absolute; 
-    top: 17%; 
-    text-shadow: none; 
-    cursor: pointer; 
-} 
-@media all and (min-width: 1000px) {
-    .leftArrow, 
-    .rightArrow {
-        top: 33% !important; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    div {
+        margin-bottom: 4rem;
+        img {
+            height: auto; 
+            width: 45vw ;
+            float:right; 
+        }
+        .techStack {
+            display: flex; 
+            justify-content: center;
+            margin-top: .5em; 
+            img {
+                height: auto; 
+                width: 3rem !important;
+            }
+        }
+        .projectInfo {
+            color: white; 
+            width: 40%; 
+            height: 15rem; 
+            // position: absolute; 
+            font-size: 2.5vh; 
+            padding: 1rem;
+            overflow-y:scroll; 
+        }
+        .projectInfo {
+            width: 50%; 
+        }
+
     }
-}
-.leftArrow {
-    left: 1%; 
-}
-.rightArrow {
-    right: 1%; 
 }
 
-.techStack {
-    display: flex; 
-    justify-content: center;
-    margin-top: .5em; 
-    img {
-        height: auto; 
-        width: 5em; 
-    }
-}
 .expNavBar {
     display: flex; 
     justify-content: center;
@@ -327,23 +354,32 @@ html{
 
 
 #techCont {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
     justify-content: center; 
     align-items: center; 
     #jsImg {
         height: auto; 
-        width: 24vw; 
+        width: 4rem; 
     }
     img {
         height: auto; 
-        width: 25vw; 
+        width: 5rem; 
         transition: all .4s; 
         &:hover {
             transform: translateY(-10px); 
         }
     }
     
+}
+@media all and (max-width: 650px) {
+    #techCont {
+        img {
+            width: 10vw; 
+        }
+        #jsImg {
+            width: 8vw;
+        }
+    }
 }
 
 // ! the following is styling for the form section of the portfolio page
@@ -358,13 +394,12 @@ form {
 .contactCont {
     height: 40em; 
     width: 100%; 
-    margin-top: 10em;
     display: flex; 
     justify-content: center;
     
     form {
         width: 80%; 
-        margin-top: 4em;   
+        margin-top: 1rem;   
         display: grid; 
         grid-template-columns: repeat(1, auto); 
 

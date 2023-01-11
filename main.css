@@ -10,6 +10,23 @@
   border-bottom: #1e3fad 0.2em solid;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  background: black;
+  height: 5%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3fad;
+}
+
 #mobileMenu p {
   text-shadow: none !important;
 }
@@ -204,56 +221,64 @@ html {
   width: 5em;
 }
 
-#expCont {
-  overflow: hidden;
-  position: relative;
-}
-
-.projContSwd {
-  display: none;
-}
-
-.projContInsta {
-  display: none;
-}
-
-.projCont2Due {
-  display: none;
-}
-
-.leftArrow,
-.rightArrow {
-  font-size: 5em;
-  position: absolute;
-  top: 17%;
-  text-shadow: none;
-  cursor: pointer;
-}
-
-@media all and (min-width: 1000px) {
-  .leftArrow,
-  .rightArrow {
-    top: 33% !important;
+@media all and (max-width: 650px) {
+  .expCont div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .expCont div img {
+    height: auto !important;
+    width: 100vw !important;
+  }
+  .expCont div .techStack {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 50rem !important;
   }
 }
 
-.leftArrow {
-  left: 1%;
+.expCont {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.rightArrow {
-  right: 1%;
+.expCont div {
+  margin-bottom: 4rem;
 }
 
-.techStack {
+.expCont div img {
+  height: auto;
+  width: 45vw;
+  float: right;
+}
+
+.expCont div .techStack {
   display: flex;
   justify-content: center;
   margin-top: .5em;
 }
 
-.techStack img {
+.expCont div .techStack img {
   height: auto;
-  width: 5em;
+  width: 3rem !important;
+}
+
+.expCont div .projectInfo {
+  color: white;
+  width: 40%;
+  height: 15rem;
+  font-size: 2.5vh;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.expCont div .projectInfo {
+  width: 50%;
 }
 
 .expNavBar {
@@ -296,25 +321,33 @@ html {
 }
 
 #techCont {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #techCont #jsImg {
   height: auto;
-  width: 24vw;
+  width: 4rem;
 }
 
 #techCont img {
   height: auto;
-  width: 25vw;
+  width: 5rem;
   transition: all .4s;
 }
 
 #techCont img:hover {
   transform: translateY(-10px);
+}
+
+@media all and (max-width: 650px) {
+  #techCont img {
+    width: 10vw;
+  }
+  #techCont #jsImg {
+    width: 8vw;
+  }
 }
 
 form * {
@@ -325,14 +358,13 @@ form * {
 .contactCont {
   height: 40em;
   width: 100%;
-  margin-top: 10em;
   display: flex;
   justify-content: center;
 }
 
 .contactCont form {
   width: 80%;
-  margin-top: 4em;
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(1, auto);
 }
